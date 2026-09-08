@@ -1,0 +1,67 @@
+Timestamp: 2026-09-06T23:23:37.880807
+Model: Qwen/Qwen2.5-3B
+Precision: FP16
+Python: 3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]
+PyTorch: 2.14.0+cu132
+Transformers: 5.16.1
+CUDA runtime: 13.2
+GPU: NVIDIA GeForce RTX 4080 Laptop GPU
+Physical GPU memory: 11.9937 GiB
+Model parameter memory: 5.7480 GiB
+HF model footprint: 5.7480 GiB
+
+MODEL ARCHITECTURE:
+Layers: 36
+Hidden size: 2048
+Attention heads: 16
+KV heads: 2
+Head dimension: 128
+
+EXPERIMENT:
+Prompt tokens: 2048
+Generated tokens/run: 128
+Pairs: 30
+Runs per condition: 30
+Total measured runs: 60
+Warmup runs: 3
+Cooldown: 60 seconds
+GPU sampling interval: 1.0 seconds
+
+KV CACHE:
+KV bytes/token: 36864
+KV KiB/token: 36.000000
+Prompt KV MiB: 72.000000
+Final KV MiB: 76.500000
+
+NVIDIA-SMI BEFORE MODEL LOAD:
+{'timestamp': '2026/09/06 22:03:26.523', 'temperature.gpu': '47', 'utilization.gpu': '3', 'utilization.memory': '6', 'memory.used': '897', 'memory.total': '12282', 'clocks.current.sm': '210', 'clocks.current.memory': '405', 'power.draw': '2.83', 'pstate': 'P8'}
+
+NVIDIA-SMI AFTER MODEL LOAD:
+{'timestamp': '2026/09/06 22:03:31.029', 'temperature.gpu': '49', 'utilization.gpu': '15', 'utilization.memory': '1', 'memory.used': '7042', 'memory.total': '12282', 'clocks.current.sm': '2280', 'clocks.current.memory': '9101', 'power.draw': '33.60', 'pstate': 'P0'}
+
+PERFORMANCE SUMMARY:
+Cache OFF mean runtime: 30.470537 s
+Cache ON mean runtime: 3.761957 s
+Ratio of mean runtimes: 8.099652x
+Mean paired speedup: 8.101147x
+Median paired speedup: 8.084003x
+Runtime reduction: 87.653790%
+Throughput improvement: 710.105350%
+Mean time saved: 26.708580 s
+
+STATISTICAL TESTS:
+Paired t statistic: 1625.645000
+Paired t p-value: 1.786307872575e-73
+Wilcoxon statistic: 465.000000
+Wilcoxon p-value: 9.313225746155e-10
+Cohen dz: 296.800812
+
+RUN-ORDER TREND:
+Cache OFF Spearman rho: -0.225806
+Cache OFF Spearman p: 2.302124547446e-01
+Cache ON Spearman rho: -0.004672
+Cache ON Spearman p: 9.804525192052e-01
+
+VRAM:
+Maximum physical VRAM: 7434 MiB
+Maximum utilization: 60.530066%

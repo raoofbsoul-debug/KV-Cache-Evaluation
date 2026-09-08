@@ -1,0 +1,52 @@
+Timestamp: 2026-09-06T20:39:30.593739
+Model: Qwen/Qwen2.5-3B
+Precision: FP16
+Python: 3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]
+PyTorch: 2.14.0+cu132
+Transformers: 5.16.1
+CUDA runtime: 13.2
+GPU: NVIDIA GeForce RTX 4080 Laptop GPU
+Physical GPU memory: 11.9937 GiB
+Model parameter memory: 5.7480 GiB
+Model buffer memory: 0.0000 GiB
+HF model memory footprint: 5.7480 GiB
+
+MODEL ARCHITECTURE:
+Layers: 36
+Hidden size: 2048
+Attention heads: 16
+KV heads: 2
+Head dimension: 128
+
+Prompt tokens: 21
+Generated tokens/run: 128
+Runs per condition: 3
+Warmup runs: 2
+Cooldown seconds: 60
+GPU sampling interval: 1.0
+
+THEORETICAL KV CACHE:
+KV bytes/token: 36864
+KV KiB/token: 36.000000
+Prompt KV MiB: 0.738281
+Approx final KV MiB: 5.238281
+
+PARAMETER PLACEMENT:
+cuda:0: 5.7480 GiB
+
+HF DEVICE MAP:
+Not available
+
+NVIDIA-SMI BEFORE MODEL LOAD:
+{'timestamp': '2026/09/06 20:31:56.147', 'temperature.gpu': '44', 'utilization.gpu': '5', 'utilization.memory': '15', 'memory.used': '812', 'memory.total': '12282', 'clocks.current.sm': '210', 'clocks.current.memory': '405', 'power.draw': '2.99', 'pstate': 'P8'}
+
+NVIDIA-SMI AFTER MODEL LOAD:
+{'timestamp': '2026/09/06 20:31:58.058', 'temperature.gpu': '46', 'utilization.gpu': '51', 'utilization.memory': '2', 'memory.used': '6957', 'memory.total': '12282', 'clocks.current.sm': '2490', 'clocks.current.memory': '9101', 'power.draw': '39.13', 'pstate': 'P0'}
+
+PERFORMANCE SUMMARY:
+Cache OFF mean runtime: 3.672656 s
+Cache ON mean runtime: 3.576976 s
+KV cache speedup: 1.026749x
+Runtime reduction: 2.605206%
+Cache OFF throughput: 34.877790 tok/s
+Cache ON throughput: 35.794844 tok/s

@@ -1,0 +1,47 @@
+Timestamp: 2026-09-07T18:39:26.405892
+Model: HuggingFaceTB/SmolLM3-3B
+Precision: FP16
+Python: 3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]
+PyTorch: 2.14.0+cu132
+Transformers: 5.16.1
+CUDA runtime: 13.2
+GPU: NVIDIA GeForce RTX 4080 Laptop GPU
+Physical GPU memory: 11.9937 GiB
+Model parameter memory: 5.7278 GiB
+HF model footprint: 5.7278 GiB
+
+ARCHITECTURE:
+Layers: 36
+Hidden size: 2048
+Attention heads: 16
+KV heads: 4
+Head dimension: 128
+
+KV CACHE:
+KV bytes/token: 73728
+KV KiB/token: 72.000000
+
+EXPERIMENT:
+Prompt lengths: [128, 256, 512, 1024, 2048]
+Generated tokens/run: 128
+Runs per condition: 3
+Warmup runs: 2
+Cooldown: 60 seconds
+GPU sampling interval: 1.0 seconds
+
+NVIDIA-SMI BEFORE MODEL LOAD:
+{'timestamp': '2026/09/07 18:03:50.892', 'temperature.gpu': '47', 'utilization.gpu': '0', 'utilization.memory': '8', 'memory.used': '660', 'memory.total': '12282', 'clocks.current.sm': '210', 'clocks.current.memory': '405', 'power.draw': '2.46', 'pstate': 'P8'}
+
+NVIDIA-SMI AFTER MODEL LOAD:
+{'timestamp': '2026/09/07 18:03:55.015', 'temperature.gpu': '49', 'utilization.gpu': '11', 'utilization.memory': '1', 'memory.used': '6713', 'memory.total': '12282', 'clocks.current.sm': '2280', 'clocks.current.memory': '9101', 'power.draw': '32.44', 'pstate': 'P0'}
+
+SPEEDUP SUMMARY:
+Context 128: mean paired speedup = 1.277816x | median = 1.273667x | SD = 0.037549 | runtime reduction = 21.707%
+Context 256: mean paired speedup = 1.728457x | median = 1.722378x | SD = 0.012422 | runtime reduction = 42.143%
+Context 512: mean paired speedup = 2.647742x | median = 2.635693x | SD = 0.027578 | runtime reduction = 62.232%
+Context 1024: mean paired speedup = 4.653423x | median = 4.654059x | SD = 0.034120 | runtime reduction = 78.510%
+Context 2048: mean paired speedup = 8.618959x | median = 8.628508x | SD = 0.110665 | runtime reduction = 88.396%
+
+VRAM:
+Maximum physical VRAM: 7345 MiB
+Maximum utilization: 59.805398%
